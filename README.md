@@ -28,7 +28,7 @@ const path = find(/.*\.js/);
 ### find(regexp, [options])
 
 Find a file or folder using the `regexp` parameter with an optional `options` object.
-It starts on the directory where Node was started and search recursively for the file or folder. It will return a `string` with the full path of the file in the file system or `undefined` if it didn't find anything.
+It starts on the directory where Node was started and search recursively for the file or folder. It will return a `string[]` with the full path of the file in the file system or `[]` if it didn't find anything.
 
 This method runs synchronously.
 
