@@ -1,8 +1,16 @@
 {
   "name": "recursive-path-finder-regexp",
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.2.0",
+  "description": "Search for files or folders by regular expression in the directory where Node was started.",
+  "keywords": [
+    "path",
+    "find",
+    "search",
+    "recursive",
+    "regexp",
+    "node"
+  ],
+  "main": "dist/index.min.js",
   "scripts": {
     "build": "node build.js"
   },
@@ -10,11 +18,20 @@
     "type": "git",
     "url": "git@github.com:wdl/path-finder-js.git"
   },
-  "author": "sijongyeoil",
+  "author": "sijongyeoil <sijongyeoil@gmail.com>",
+  "homepage": "https://github.com/wdl/recursive-path-finder-regexp",
+  "bugs": {
+    "url": "https://github.com/wdl/recursive-path-finder-regexp/issues",
+    "email": "sijongyeoil@gmail.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/plugin-transform-arrow-functions": "^7.2.0",
     "uglify-es": "^3.3.9"
-  }
+  },
+  "files": [
+    "dist",
+    "lib"
+  ]
 }
