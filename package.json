@@ -1,0 +1,20 @@
+{
+  "name": "recursive-path-finder-regexp",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wdl/path-finder-js.git"
+  },
+  "author": "sijongyeoil",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-transform-arrow-functions": "^7.2.0",
+    "uglify-es": "^3.3.9"
+  }
+}
