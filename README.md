@@ -1,5 +1,4 @@
-# recursive-path-finder
-<!-- ![Build Status](https://travis-ci.org/ricardorauber/recursive-path-finder.svg?branch=master) -->
+# recursive-path-finder-regexp
 
 Search for files or folders in the directory where Node was started.
 
