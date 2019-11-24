@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:wdl/path-finder-js.git"
+    "url": "git@github.com:wdl/recursive-path-finder-regexp.git"
   },
   "author": "sijongyeoil <sijongyeoil@gmail.com>",
   "homepage": "https://github.com/wdl/recursive-path-finder-regexp",
