@@ -11,8 +11,8 @@ build = async (name, lib, dist) => {
     const codeBabelTransformed = resultBabelTransform.code;
     const resultUglifyJSMinify = uglifyJS.minify(codeBabelTransformed);
     const codeUglifyJSMinified = resultUglifyJSMinify.code;
-    
-    await fs.writeFile(path.join(dist, `${name}.min.js`), codeUglifyJSMinified);
+
+    await fs.writeFile(path.join(dist, `${name}.js`), codeUglifyJSMinified);
 }
 
 build('index', 'lib', 'dist');

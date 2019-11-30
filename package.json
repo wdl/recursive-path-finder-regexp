@@ -1,6 +1,6 @@
 {
   "name": "recursive-path-finder-regexp",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Search for files or folders by regular expression in the directory where Node was started.",
   "keywords": [
     "path",
@@ -10,7 +10,7 @@
     "regexp",
     "node"
   ],
-  "main": "dist/index.min.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "node build.js"
   },
@@ -31,7 +31,6 @@
     "uglify-es": "^3.3.9"
   },
   "files": [
-    "dist",
-    "lib"
+    "dist"
   ]
 }

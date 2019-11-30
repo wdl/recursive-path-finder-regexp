@@ -35,6 +35,7 @@ This method runs synchronously.
 Avaliable properties for `options`:
 
 - **basePath** : The base path from where the search started.
+- **isAbsoluteResultsPath** : A flag to determine results path type.
 - **isFile** : A flag to search for specifying type of folder or file.
 - **exclude** : A list of regular expressions to disconsider.
 
@@ -42,26 +43,31 @@ Avaliable properties for `options`:
 const find = require('recursive-path-finder-regexp');
 
 console.log(find(/.*\.js/))
+// [ 'example.js',
+//   'target/v1/login.js',
+//   'target/v2/login.js' ]
+
+console.log(find(/.*\.js/, { basePath: 'target/v1' }))
+// [ 'target/v1/login.js' ]
+console.log(find(/.*\.js/, { basePath: 'target/v2' }))
+// [ 'target/v2/login.js' ]
+
+console.log(find(/.*\.js/, { isAbsoluteResultsPath: true }))
 // [ '~/projects/awesome_project/source/example/example.js',
 //   '~/projects/awesome_project/source/example/target/v1/login.js',
 //   '~/projects/awesome_project/source/example/target/v2/login.js' ]
 
-console.log(find(/.*\.js/, { basePath: 'target/v1' }))
-// [ '~/projects/awesome_project/source/example/target/v1/login.js' ]
-console.log(find(/.*\.js/, { basePath: 'target/v2' }))
-// [ '~/projects/awesome_project/source/example/target/v2/login.js' ]
-
 console.log(find(/v1.*/))
-// [ '~/projects/awesome_project/source/example/target/v1',
-//   '~/projects/awesome_project/source/example/target/v1/login.js' ]
+// [ 'target/v1',
+//   'target/v1/login.js' ]
 console.log(find(/v1.*/, { isFile: true }))
-// [ '~/projects/awesome_project/source/example/target/v1/login.js' ]
+// [ 'target/v1/login.js' ]
 console.log(find(/v1.*/, { isFile: false }))
-// [ '~/projects/awesome_project/source/example/target/v1' ]
+// [ 'target/v1' ]
 
 console.log(find(/.*\.js/, { exclude: [/v1/] }))
-// [ '~/projects/awesome_project/source/example/example.js',
-//   '~/projects/awesome_project/source/example/target/v2/login.js' ]
+// [ 'example.js',
+//   'target/v2/login.js' ]
 ```
 
 ## License
